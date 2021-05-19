@@ -1,7 +1,11 @@
 <template>
   <NavBar />
-  <div style="height: 25vh"></div>
+  <open-img />
+
   <div class="container">
+    <div class="title has-text-center">
+      <p class="is-size-3 pt-3 has-text-black">Places Taking Covid Test</p>
+    </div>
     <!--Row One-->
     <div class="columns">
       <div class="column">
@@ -33,21 +37,21 @@
           <div class="columns">
             <div class="column">
               <div class="covidtop">
-                <h4 class="is-size-3 has-text-weight-semibold">Jagruthi</h4>
+                <h4 class="is-size-3 has-text-weight-semibold">Thyrocare</h4>
                 <p class="is-size-6 has-text-success pr-4">Verified</p>
               </div>
             </div>
           </div>
           <div class="columns">
             <h4 class="is-size-6 column">
-              Gandhipuram-2,Rajahmundry<br />
-              Ph.No : <a href="tel:+917794970883">0883-000000</a>
+              Near TTD Kalyana Mandapam,Rajahmundry<br />
+              Ph.No : <a href="tel:+917794970883">0883-034743</a>
             </h4>
             <p class="is-size-6 column p-4 has-text-right">
               RTPCR
               <i class="far fa-check-circle has-text-success pr-2"></i>
               Rapid-Antigen
-              <i class="far fa-times-circle has-text-danger"></i>
+              <i class="far fa-check-circle has-text-success"></i>
             </p>
           </div>
         </div>
@@ -60,21 +64,21 @@
           <div class="columns">
             <div class="column">
               <div class="covidtop">
-                <h4 class="is-size-3 has-text-weight-semibold">Jagruthi</h4>
+                <h4 class="is-size-3 has-text-weight-semibold">PHC</h4>
                 <p class="is-size-6 has-text-success pr-4">Verified</p>
               </div>
             </div>
           </div>
           <div class="columns">
             <h4 class="is-size-6 column">
-              Gandhipuram-2,Rajahmundry<br />
+              Morumpudi,Rajahmundry<br />
               Ph.No : <a href="tel:+917794970883">0883-000000</a>
             </h4>
             <p class="is-size-6 column p-4 has-text-right">
               RTPCR
               <i class="far fa-check-circle has-text-success pr-2"></i>
               Rapid-Antigen
-              <i class="far fa-times-circle has-text-danger"></i>
+              <i class="far fa-check-circle has-text-success"></i>
             </p>
           </div>
         </div>
@@ -84,27 +88,27 @@
           <div class="columns">
             <div class="column">
               <div class="covidtop">
-                <h4 class="is-size-3 has-text-weight-semibold">Jagruthi</h4>
+                <h4 class="is-size-3 has-text-weight-semibold">PHC</h4>
                 <p class="is-size-6 has-text-success pr-4">Verified</p>
               </div>
             </div>
           </div>
           <div class="columns">
             <h4 class="is-size-6 column">
-              Gandhipuram-2,Rajahmundry<br />
-              Ph.No : <a href="tel:+917794970883">0883-000000</a>
+              Narayanapuram,Rajahmundry<br />
+              Ph.No : <a href="tel:+917794970883">0883-007800</a>
             </h4>
             <p class="is-size-6 column p-4 has-text-right">
               RTPCR
               <i class="far fa-check-circle has-text-success pr-2"></i>
               Rapid-Antigen
-              <i class="far fa-times-circle has-text-danger"></i>
+              <i class="far fa-check-circle has-text-success"></i>
             </p>
           </div>
         </div>
       </div>
     </div>
-    <!--Row Three-->
+    <!-- Row Three
     <div class="columns">
       <div class="column">
         <div class="covidcard">
@@ -154,7 +158,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
   <Footer />
   <GoTop />
@@ -164,11 +168,13 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import GoTop from "../components/GoTop";
+import OpenImg from "../components/OpenImg.vue";
 export default {
   components: {
     NavBar,
     Footer,
     GoTop,
+    OpenImg,
   },
 };
 </script>
@@ -176,17 +182,12 @@ export default {
 <style lang="scss">
 .covidcard {
   background: rgba(255, 255, 255, 0.466);
-  min-height: 15vh;
+  min-height: 30vh !important;
   border-radius: 5px;
   color: black;
   padding: 10px;
-  border: 1.5px solid black;
-  box-shadow: 5px 5px 3px rgb(27, 27, 27), 5px 5px 3px rgb(27, 27, 27);
+  box-shadow: 2px 2px 12px rgb(109, 108, 108);
   .covidtop {
-    display: flex;
-    justify-content: space-between;
-  }
-  .covidmiddle {
     display: flex;
     justify-content: space-between;
   }

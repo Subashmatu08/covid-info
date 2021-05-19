@@ -1,94 +1,91 @@
 <template>
   <NavBar />
   <OpenImg />
-  <div class="title has-text-center">
-    <p class="is-size-3 pl-3 pt-3 has-text-black">Please Select One Option</p>
-  </div>
-  <div class="content is-size-5">
-    <div class="columns">
-      <div class="column">
-        <router-link to="/oxygen">
-          <div class="card">
-            <div class="card-content">
-              <div class="content">
-                <h4>Oxygen Supplies</h4>
-                <p>Oxygen Suppliers near in the region</p>
-              </div>
-            </div>
-          </div></router-link
-        >
-      </div>
-      <div class="column">
-        <router-link to="/blood-test">
-          <div class="a">
-            <h4>Blood Test</h4>
-            <p>Find Places that Test Blood</p>
-          </div></router-link
-        >
-      </div>
-      <div class="column">
-        <router-link to="/covid-test">
-          <div class="a">
-            <h4>Covid Test</h4>
-            <p>Find all the locations for Covid Testing</p>
-          </div></router-link
-        >
-      </div>
+  <div class="container">
+    <div class="title has-text-center">
+      <p class="is-size-3 pt-3 has-text-black">Click Below</p>
     </div>
-    <div class="columns">
-      <div class="column">
-        <router-link to="/doctors">
-          <div class="a">
-            <h4>Doctors</h4>
-            <p>Find a Doctor</p>
-          </div></router-link
-        >
+    <div class="content is-size-5">
+      <div class="columns">
+        <div class="column">
+          <router-link to="/oxygen">
+            <div class="maincards">
+              <h4>Oxygen Supply</h4>
+              <p>Find Places to get Oxygen Cylinders</p>
+            </div></router-link
+          >
+        </div>
+        <div class="column">
+          <router-link to="/blood-test">
+            <div class="maincards">
+              <h4>Blood Test</h4>
+              <p>Find Places that Test Blood</p>
+            </div></router-link
+          >
+        </div>
+        <div class="column">
+          <router-link to="/covid-test">
+            <div class="maincards">
+              <h4>Covid Test</h4>
+              <p>Find all the locations for Covid Testing</p>
+            </div></router-link
+          >
+        </div>
       </div>
-      <div class="column">
-        <router-link to="/hospitals">
-          <div class="a">
-            <h4>Hospital</h4>
-            <p>Find a Hospital</p>
-          </div></router-link
-        >
+      <div class="columns">
+        <div class="column">
+          <router-link to="/doctors">
+            <div class="maincards">
+              <h4>Doctors</h4>
+              <p>Find a Doctor</p>
+            </div></router-link
+          >
+        </div>
+        <div class="column">
+          <router-link to="/hospitals">
+            <div class="maincards">
+              <h4>Hospital</h4>
+              <p>Find a Hospital</p>
+            </div></router-link
+          >
+        </div>
+        <div class="column">
+          <router-link to="/hospital-beds">
+            <div class="maincards">
+              <h4>Hospital Beds</h4>
+              <p>Find a Hospital Bed</p>
+            </div></router-link
+          >
+        </div>
       </div>
-      <div class="column">
-        <router-link to="/hospital-beds">
-          <div class="a">
-            <h4>Hospital Beds</h4>
-            <p>Find a Hospital Bed</p>
-          </div></router-link
-        >
-      </div>
-    </div>
-    <div class="columns">
-      <div class="column">
-        <router-link to="/ambulance">
-          <div class="a">
-            <h4>Ambulance</h4>
-            <p>Call an Ambulance</p>
-          </div></router-link
-        >
-      </div>
-      <div class="column">
-        <router-link to="/remedesivir">
-          <div class="a">
-            <h4>Remedesivir</h4>
-            <p>Find where to get Remedisivir</p>
-          </div></router-link
-        >
-      </div>
-      <div class="column">
-        <router-link to="/food-supplies">
-          <div class="a">
-            <h4>Food Supplies</h4>
-            <p>Find Food Supplies</p>
-          </div></router-link
-        >
+      <div class="columns">
+        <div class="column">
+          <router-link to="/ambulance">
+            <div class="maincards">
+              <h4>Ambulance</h4>
+              <p>Call an Ambulance</p>
+            </div></router-link
+          >
+        </div>
+        <div class="column">
+          <router-link to="/remedesivir">
+            <div class="maincards">
+              <h4>Remedesivir</h4>
+              <p>Find where to get Remedisivir</p>
+            </div></router-link
+          >
+        </div>
+        <div class="column">
+          <router-link to="/food-supplies">
+            <div class="maincards">
+              <h4>Food Supplies</h4>
+              <p>Find Food Supplies</p>
+            </div></router-link
+          >
+        </div>
       </div>
     </div>
   </div>
-
   <Footer />
   <GoTop />
 </template>
@@ -109,14 +106,12 @@ export default {
 </script>
 
 <style lang="scss">
-.a {
-  background: rgba(255, 255, 255, 0.466);
+.maincards {
   min-height: 15vh;
-  margin: 5px 15px;
-  border-radius: 3px;
+  border-radius: 5px;
   color: black;
   padding: 10px;
-  box-shadow: 3px 3px 3px rgb(49, 48, 48);
+  box-shadow: 2px 2px 12px rgb(167, 166, 166);
 }
 .a:hover {
   box-shadow: 0 !important;
@@ -132,11 +127,17 @@ a::selection {
   padding: auto 0 !important;
 }
 
+@media screen and (max-width: 1024px) {
+  .container {
+    margin: auto 10px;
+  }
+}
+
 input,
 textarea,
 button,
 select,
 a {
-  -webkit-tap-highlight-color: rgba(131, 128, 128, 0);
+  -webkit-tap-highlight-color: rgba(138, 138, 138, 0.288);
 }
 </style>

@@ -175,9 +175,15 @@ nav a.isNavShown {
 navbar-burger.isNavShown {
   color: black !important;
 }
+.navbar-burger {
+  height: auto;
+}
 @media screen and (max-width: 1023px) {
   .navbar-menu {
     background-color: transparent !important;
+  }
+  .logo {
+    background-color: transparent;
   }
 }
 </style>

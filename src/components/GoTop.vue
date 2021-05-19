@@ -57,8 +57,4 @@ export default {
 .goup1 {
   display: none;
 }
-.GoupShown {
-  display: block !important;
-  padding-top: 1.5px;
-}
 </style>

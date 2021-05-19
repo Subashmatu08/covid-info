@@ -181,7 +181,7 @@ export default {
   color: black;
   padding: 10px;
   border: 1.5px solid black;
-  box-shadow: 5px 5px 3px rgb(27, 27, 27);
+  box-shadow: 5px 5px 3px rgb(27, 27, 27), 5px 5px 3px rgb(27, 27, 27);
   .covidtop {
     display: flex;
     justify-content: space-between;

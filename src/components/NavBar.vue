@@ -9,10 +9,11 @@
     <div class="navbar-brand">
       <p
         class="navbar-item logo"
+        :class="{ isNavShown }"
         href="http://localhost:8080/#/"
         target="_blank"
       >
-        RJY-COVID-INFO
+        Rjy Covid Info
       </p>
 
       <a
@@ -121,20 +122,29 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 /* .navbar{
   width: 100vw !important;
 } */
 nav {
-  position: fixed;
+  position: fixed !important;
   /* background-color: rgba(255, 255, 255, 0.6) !important; */
   background-color: transparent !important;
   width: 100%;
 }
+.isNavShown {
+  .logo {
+    color: rgb(19, 19, 19);
+    background: transparent;
+  }
+}
 .logo {
-  color: red;
-  font-size: 26px;
-  font-weight: 700;
+  font-family: "Pattaya", sans-serif;
+  font-size: 30px;
+  color: rgb(19, 19, 19);
+  background-color: rgba(128, 128, 128, 0.288);
+  backdrop-filter: blur(2px);
+  margin-top: 5px;
 }
 nav a {
   color: white !important;

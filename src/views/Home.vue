@@ -1,16 +1,20 @@
 <template>
   <NavBar />
-  <div style="height: 25vh"></div>
+  <OpenImg />
   <div class="title has-text-center">
-    <p class="is-size-3 pl-5 has-text-white">Please Select One Option</p>
+    <p class="is-size-3 pl-3 pt-3 has-text-black">Please Select One Option</p>
   </div>
   <div class="content is-size-5">
     <div class="columns">
       <div class="column">
         <router-link to="/oxygen">
-          <div class="a">
-            <h4>Oxygen Supplies</h4>
-            <p>Oxygen Suppliers near in the region</p>
+          <div class="card">
+            <div class="card-content">
+              <div class="content">
+                <h4>Oxygen Supplies</h4>
+                <p>Oxygen Suppliers near in the region</p>
+              </div>
+            </div>
           </div></router-link
         >
       </div>
@@ -93,11 +97,13 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import GoTop from "../components/GoTop";
+import OpenImg from "../components/OpenImg.vue";
 export default {
   components: {
     NavBar,
     Footer,
     GoTop,
+    OpenImg,
   },
 };
 </script>
@@ -106,15 +112,14 @@ export default {
 .a {
   background: rgba(255, 255, 255, 0.466);
   min-height: 15vh;
-  margin: 10px 15px;
-  border-radius: 5px;
+  margin: 5px 15px;
+  border-radius: 3px;
   color: black;
   padding: 10px;
-  border: 1.5px solid black;
-  box-shadow: 5px 5px 3px rgb(27, 27, 27);
-}
-.a:active {
   box-shadow: 3px 3px 3px rgb(49, 48, 48);
+}
+.a:hover {
+  box-shadow: 0 !important;
 }
 h4 {
   font-size: 30px;

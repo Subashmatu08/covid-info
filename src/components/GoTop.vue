@@ -48,7 +48,9 @@ export default {
   display: none;
   .fa-arrow-circle-up:before {
     font-size: 30px;
-    background: rgb(72, 241, 191);
+    // background: rgb(72, 241, 191);
+    background-color: rgba(128, 128, 128, 0.288) !important;
+    backdrop-filter: blur(1px);
     position: fixed;
     bottom: 20px;
     right: 20px;

@@ -46,50 +46,6 @@
         <router-link to="/feedback" class="navbar-item" :class="{ isNavShown }"
           >FeedBack</router-link
         >
-        <!-- <router-link
-          to="/commercial"
-          class="navbar-item"
-          :class="{ isNavShown }"
-          >Commercial</router-link
-        >
-        <router-link to="/news" class="navbar-item" :class="{ isNavShown }"
-          >News</router-link
-        >
-        <router-link to="/products" class="navbar-item" :class="{ isNavShown }"
-          >Products</router-link
-        >
-        <router-link to="/services" class="navbar-item" :class="{ isNavShown }"
-          >Services</router-link
-        >
-        <router-link
-          to="/getintouch"
-          class="navbar-item"
-          :class="{ isNavShown }"
-          >Get In Touch</router-link
-        > -->
-
-        <!-- <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          {{hero}}
-          More
-        </a>
-
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
-          <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
-        </div>
-      </div> -->
       </div>
     </div>
   </nav>
@@ -98,9 +54,6 @@
 <script>
 import { onMounted, ref } from "vue";
 export default {
-  // props : {
-  //     hero : String
-  // }
   setup() {
     const isMenuShown = ref(false);
     const isNavShown = ref(false);
@@ -123,27 +76,26 @@ export default {
 </script>
 
 <style lang="scss">
-/* .navbar{
-  width: 100vw !important;
-} */
 nav {
   position: fixed !important;
-  /* background-color: rgba(255, 255, 255, 0.6) !important; */
-  background-color: transparent !important;
   width: 100%;
+  background-color: rgba(240, 239, 239, 0.288) !important;
+  backdrop-filter: blur(2px);
 }
 .isNavShown {
   .logo {
     color: rgb(19, 19, 19);
     background: transparent;
   }
+  .navbar-end {
+    background-color: transparent !important;
+    backdrop-filter: none;
+  }
 }
 .logo {
   font-family: "Pattaya", sans-serif;
   font-size: 30px;
   color: rgb(19, 19, 19);
-  background-color: rgba(128, 128, 128, 0.288);
-  backdrop-filter: blur(2px);
   margin-top: 5px;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -156,12 +108,11 @@ nav a {
   text-align: center;
   font-weight: 500;
   margin-top: 5px;
-  background-color: rgba(128, 128, 128, 0.288);
-  backdrop-filter: blur(2px);
+  border: none;
 }
 nav a:hover {
   background-color: transparent !important;
-  border-bottom: 2px solid rgb(72, 241, 191);
+  border-bottom: 2px solid rgb(72, 241, 191) !important;
 }
 nav a:focus {
   background-color: transparent !important;
@@ -171,11 +122,12 @@ nav.isNavShown {
   padding-bottom: 10px !important;
   background-color: white !important;
   transition: 0.3s ease-in-out;
-  box-shadow: 0px 1.5px 7px grey;
+  box-shadow: 0px 1.5px 7px rgb(197, 196, 196);
 }
 nav a.isNavShown {
   color: black !important;
   background-color: transparent;
+  border-bottom: none;
 }
 .navbar-menu {
   box-shadow: none !important;
@@ -190,11 +142,8 @@ navbar-burger.isNavShown {
   .navbar-menu {
     background-color: transparent !important;
   }
-  .logo {
-    background-color: transparent;
-  }
   nav a:hover {
-    border-bottom: none;
+    border-bottom: none !important;
   }
 }
 </style>

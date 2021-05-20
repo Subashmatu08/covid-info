@@ -1,7 +1,6 @@
 <template>
   <NavBar />
-  <open-img />
-
+  <div style="height: 15vh"></div>
   <div class="container">
     <div class="title has-text-center">
       <p class="is-size-3 pt-3 has-text-black">Places Taking Covid Test</p>
@@ -168,13 +167,21 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import GoTop from "../components/GoTop";
-import OpenImg from "../components/OpenImg.vue";
+import { onMounted } from "vue";
 export default {
   components: {
     NavBar,
     Footer,
     GoTop,
-    OpenImg,
+  },
+  setup() {
+    onMounted(() => {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    });
   },
 };
 </script>

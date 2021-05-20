@@ -1,6 +1,5 @@
 <template>
   <NavBar />
-  <open-img />
   <div style="height: 100vh"></div>
   <Footer />
   <GoTop />
@@ -10,13 +9,17 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import GoTop from "../components/GoTop";
-import OpenImg from "../components/OpenImg.vue";
+import { onMounted } from "vue";
 export default {
   components: {
     NavBar,
     Footer,
     GoTop,
-    OpenImg,
+  },
+  setup() {
+    onMounted(() => {
+      window.scrollTo(0, 0);
+    });
   },
 };
 </script>

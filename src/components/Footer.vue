@@ -27,6 +27,9 @@ footer {
   color: black;
   font-weight: 500;
   box-shadow: 0px 1px 5px rgb(197, 196, 196);
+  position: absolute;
+  top: 100;
+  width: 100%;
 }
 .to {
   color: black;

@@ -1,6 +1,6 @@
 <template>
   <nav-bar />
-  <open-img />
+  <div class="simply" style="height: 30vh"></div>
   <h1 class="is-size-2 pt-2">This is The Feedback Page</h1>
   <p class="is-size-5">Content Coming Soon!!</p>
   <div class="simply" style="height: 50vh"></div>
@@ -9,13 +9,21 @@
 
 <script>
 import NavBar from "../components/NavBar.vue";
-import OpenImg from "../components/OpenImg.vue";
 import Footer from "../components/Footer.vue";
+import { onMounted } from "vue";
 export default {
   components: {
-    OpenImg,
     NavBar,
     Footer,
+  },
+  setup() {
+    onMounted(() => {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    });
   },
 };
 </script>

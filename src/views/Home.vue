@@ -3,10 +3,24 @@
   <OpenImg />
   <div class="container">
     <div class="title has-text-center">
-      <p class="is-size-3 pt-3 has-text-black">Click Below</p>
+      <p class="is-size-4 pt-3 has-text-black">
+        One Place for all Covid Related Information in Rajahamundry
+      </p>
     </div>
     <div class="content is-size-5">
       <div class="columns">
+        <div class="column">
+          <router-link to="/covid-test">
+            <div class="maincards">
+              <h4 class="maincardshead">
+                <i class="fas fa-microscope"></i> Covid Test
+              </h4>
+              <p class="maincardsdesc">
+                Find all the locations for Covid Testing
+              </p>
+            </div></router-link
+          >
+        </div>
         <div class="column">
           <router-link to="/oxygen">
             <div class="maincards">
@@ -27,25 +41,13 @@
             </div></router-link
           >
         </div>
-        <div class="column">
-          <router-link to="/covid-test">
-            <div class="maincards">
-              <h4 class="maincardshead">
-                <i class="fas fa-microscope"></i> Covid Test
-              </h4>
-              <p class="maincardsdesc">
-                Find all the locations for Covid Testing
-              </p>
-            </div></router-link
-          >
-        </div>
       </div>
       <div class="columns">
         <div class="column">
           <router-link to="/doctors">
             <div class="maincards">
               <h4 class="maincardshead">
-                <i class="fas fa-user-md"></i> Doctors
+                <i class="fas fa-user-md-chat"></i> Doctors
               </h4>
               <p class="maincardsdesc">Find a Doctor</p>
             </div></router-link
@@ -115,12 +117,22 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import GoTop from "../components/GoTop";
 import OpenImg from "../components/OpenImg.vue";
+import { onMounted } from "vue";
 export default {
   components: {
     NavBar,
     Footer,
     GoTop,
     OpenImg,
+  },
+  setup() {
+    onMounted(() => {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    });
   },
 };
 </script>

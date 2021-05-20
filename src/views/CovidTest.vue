@@ -181,12 +181,11 @@ export default {
 
 <style lang="scss">
 .covidcard {
-  background: rgba(255, 255, 255, 0.466);
   min-height: 30vh !important;
   border-radius: 5px;
   color: black;
   padding: 10px;
-  box-shadow: 2px 2px 12px rgb(109, 108, 108);
+  box-shadow: 2px 2px 12px rgb(197, 196, 196);
   .covidtop {
     display: flex;
     justify-content: space-between;
@@ -195,6 +194,9 @@ export default {
 @media screen and (max-width: 1024px) {
   .container {
     margin: auto 30px;
+  }
+  .covidcard {
+    border-radius: 10px;
   }
 }
 </style>

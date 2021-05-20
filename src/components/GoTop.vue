@@ -1,9 +1,12 @@
 <template>
   <!--Back to the top button -->
-  <a class="goup" @click="ToTop">
-    <span class="icon goup1" :class="{ GoupShown }" style="zoom: 2 !important">
-      <ion-icon name="arrow-up-circle-outline"></ion-icon>
+  <!-- <a class="goup" @click="ToTop">
+    <span class="icon goup1" :class="{ GoupShown }">
+      <i class="fal fa-arrow-circle-up icon"></i>
     </span>
+  </a> -->
+  <a class="goup" @click="ToTop" :class="{ GoupShown }">
+    <i class="fal fa-arrow-circle-up icon"></i>
   </a>
 </template>
 
@@ -40,21 +43,22 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .goup {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: rgb(72, 241, 191);
-  color: black;
-  text-align: center;
-  border-radius: 50%;
-}
-.goup:hover {
-  color: black;
-}
-
-.goup1 {
   display: none;
+  .fa-arrow-circle-up:before {
+    font-size: 30px;
+    background: rgb(72, 241, 191);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: black;
+    text-align: center;
+    border-radius: 50%;
+    padding: 0.5rem;
+  }
+}
+.GoupShown {
+  display: block;
 }
 </style>

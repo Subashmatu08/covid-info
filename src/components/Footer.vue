@@ -3,7 +3,7 @@
     <div class="content has-text-center pl-5">
       <p class="footertext">
         RJY Covid Info by
-        <a href="http://localhost:8080/#/" target="_blank" class="to"
+        <a href="https://subashmatu.netlify.app" target="_blank" class="to"
           >Subash Matu</a
         >.
       </p>
@@ -23,9 +23,10 @@ footer {
   margin-top: 20px;
   min-height: 5vh !important;
   padding: 0 !important;
-  background: rgb(165, 163, 163) !important;
+  background: rgb(250, 247, 247) !important;
   color: black;
   font-weight: 500;
+  box-shadow: 0px 1px 5px rgb(197, 196, 196);
 }
 .to {
   color: black;

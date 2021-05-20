@@ -10,24 +10,32 @@
         <div class="column">
           <router-link to="/oxygen">
             <div class="maincards">
-              <h4>Oxygen Supply</h4>
-              <p>Find Places to get Oxygen Cylinders</p>
+              <h4 class="maincardshead">
+                <i class="fas fa-lungs"></i> Oxygen Supply
+              </h4>
+              <p class="maincardsdesc">Find Places to get Oxygen Cylinders</p>
             </div></router-link
           >
         </div>
         <div class="column">
           <router-link to="/blood-test">
             <div class="maincards">
-              <h4>Blood Test</h4>
-              <p>Find Places that Test Blood</p>
+              <h4 class="maincardshead">
+                <i class="fas fa-microscope"></i> Blood Test
+              </h4>
+              <p class="maincardsdesc">Find Places that Test Blood</p>
             </div></router-link
           >
         </div>
         <div class="column">
           <router-link to="/covid-test">
             <div class="maincards">
-              <h4>Covid Test</h4>
-              <p>Find all the locations for Covid Testing</p>
+              <h4 class="maincardshead">
+                <i class="fas fa-microscope"></i> Covid Test
+              </h4>
+              <p class="maincardsdesc">
+                Find all the locations for Covid Testing
+              </p>
             </div></router-link
           >
         </div>
@@ -36,24 +44,30 @@
         <div class="column">
           <router-link to="/doctors">
             <div class="maincards">
-              <h4>Doctors</h4>
-              <p>Find a Doctor</p>
+              <h4 class="maincardshead">
+                <i class="fas fa-user-md"></i> Doctors
+              </h4>
+              <p class="maincardsdesc">Find a Doctor</p>
             </div></router-link
           >
         </div>
         <div class="column">
           <router-link to="/hospitals">
             <div class="maincards">
-              <h4>Hospital</h4>
-              <p>Find a Hospital</p>
+              <h4 class="maincardshead">
+                <i class="fas fa-hospital"></i> Hospital
+              </h4>
+              <p class="maincardsdesc">Find a Hospital</p>
             </div></router-link
           >
         </div>
         <div class="column">
           <router-link to="/hospital-beds">
             <div class="maincards">
-              <h4>Hospital Beds</h4>
-              <p>Find a Hospital Bed</p>
+              <h4 class="maincardshead">
+                <i class="fas fa-procedures"></i> Hospital Beds
+              </h4>
+              <p class="maincardsdesc">Find a Hospital Bed</p>
             </div></router-link
           >
         </div>
@@ -62,24 +76,30 @@
         <div class="column">
           <router-link to="/ambulance">
             <div class="maincards">
-              <h4>Ambulance</h4>
-              <p>Call an Ambulance</p>
+              <h4 class="maincardshead">
+                <i class="fas fa-ambulance"></i> Ambulance
+              </h4>
+              <p class="maincardsdesc">Call an Ambulance</p>
             </div></router-link
           >
         </div>
         <div class="column">
           <router-link to="/remedesivir">
             <div class="maincards">
-              <h4>Remedesivir</h4>
-              <p>Find where to get Remedisivir</p>
+              <h4 class="maincardshead">
+                <i class="fas fa-syringe"></i> Remedesivir
+              </h4>
+              <p class="maincardsdesc">Find where to get Remedisivir</p>
             </div></router-link
           >
         </div>
         <div class="column">
           <router-link to="/food-supplies">
             <div class="maincards">
-              <h4>Food Supplies</h4>
-              <p>Find Food Supplies</p>
+              <h4 class="maincardshead">
+                <i class="fas fa-utensils"></i> Food Supplies
+              </h4>
+              <p class="maincardsdesc">Find Food Supplies</p>
             </div></router-link
           >
         </div>
@@ -107,29 +127,38 @@ export default {
 
 <style lang="scss">
 .maincards {
-  min-height: 15vh;
+  min-height: 25vh;
   border-radius: 5px;
   color: black;
   padding: 10px;
-  box-shadow: 2px 2px 12px rgb(167, 166, 166);
+  box-shadow: 2px 2px 12px rgb(197, 196, 196);
 }
-.a:hover {
-  box-shadow: 0 !important;
+.maincardsdesc {
+  padding: 20px 0;
 }
+.maincards:hover {
+  background: rgb(126, 199, 248);
+  color: white !important;
+  .maincardshead {
+    color: white;
+    font-size: 30px;
+  }
+}
+
 h4 {
   font-size: 30px;
 }
-a::selection {
-  background: transparent;
-}
-
 .column {
   padding: auto 0 !important;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 765px) {
   .container {
-    margin: auto 10px;
+    margin: auto 30px;
+  }
+  .maincards {
+    min-height: 15px;
+    border-radius: 10px;
   }
 }
 
@@ -138,6 +167,6 @@ textarea,
 button,
 select,
 a {
-  -webkit-tap-highlight-color: rgba(138, 138, 138, 0.288);
+  -webkit-tap-highlight-color: rgba(138, 138, 138, 0);
 }
 </style>

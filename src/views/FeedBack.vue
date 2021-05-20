@@ -1,21 +1,23 @@
 <template>
-  <NavBar />
-  <div style="height: 100vh"></div>
+  <nav-bar />
+  <open-img />
+  <h1 class="is-size-2 pt-2">This is The Feedback Page</h1>
+  <p class="is-size-5">Content Coming Soon!!</p>
+  <div class="simply" style="height: 50vh"></div>
   <Footer />
-  <GoTop />
 </template>
 
 <script>
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import GoTop from "../components/GoTop";
+import NavBar from "../components/NavBar.vue";
+import OpenImg from "../components/OpenImg.vue";
+import Footer from "../components/Footer.vue";
 export default {
   components: {
+    OpenImg,
     NavBar,
     Footer,
-    GoTop,
   },
 };
 </script>
 
-<style></style>
+<style lang="sass"></style>

@@ -43,7 +43,7 @@
         <router-link to="/about" class="navbar-item" :class="{ isNavShown }"
           >About</router-link
         >
-        <router-link to="/about" class="navbar-item" :class="{ isNavShown }"
+        <router-link to="/feedback" class="navbar-item" :class="{ isNavShown }"
           >FeedBack</router-link
         >
         <!-- <router-link
@@ -105,9 +105,9 @@ export default {
     const isMenuShown = ref(false);
     const isNavShown = ref(false);
     function handleScroll() {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 1) {
         isNavShown.value = true;
-      } else if (window.scrollY <= 50) {
+      } else if (window.scrollY <= 1) {
         isNavShown.value = false;
       }
     }
@@ -145,11 +145,19 @@ nav {
   background-color: rgba(128, 128, 128, 0.288);
   backdrop-filter: blur(2px);
   margin-top: 5px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 nav a {
-  color: white !important;
+  color: black !important;
   border-bottom: 1px solid transparent;
   text-align: center;
+  font-weight: 500;
+  margin-top: 5px;
+  background-color: rgba(128, 128, 128, 0.288);
+  backdrop-filter: blur(2px);
 }
 nav a:hover {
   background-color: transparent !important;
@@ -159,7 +167,6 @@ nav a:focus {
   background-color: transparent !important;
 }
 nav.isNavShown {
-  color: black !important;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
   background-color: white !important;
@@ -168,6 +175,7 @@ nav.isNavShown {
 }
 nav a.isNavShown {
   color: black !important;
+  background-color: transparent;
 }
 .navbar-menu {
   box-shadow: none !important;
@@ -184,6 +192,9 @@ navbar-burger.isNavShown {
   }
   .logo {
     background-color: transparent;
+  }
+  nav a:hover {
+    border-bottom: none;
   }
 }
 </style>

@@ -7,14 +7,7 @@
     style="position: fixed"
   >
     <div class="navbar-brand">
-      <p
-        class="navbar-item logo"
-        :class="{ isNavShown }"
-        href="http://localhost:8080/#/"
-        target="_blank"
-      >
-        Rjy Covid Info
-      </p>
+      <p class="navbar-item logo" :class="{ isNavShown }">&nbsp;Covid Info</p>
 
       <a
         role="button"
@@ -102,6 +95,9 @@ nav {
   -ms-user-select: none;
   user-select: none;
 }
+.logo::before {
+  content: "Rjy";
+}
 nav a {
   color: black !important;
   border-bottom: 1px solid transparent;
@@ -148,6 +144,7 @@ nav a.isNavShown {
   }
   .logo {
     text-align: center !important;
+    font-size: 25px;
   }
   nav {
     padding-top: 10px !important;
@@ -156,10 +153,13 @@ nav a.isNavShown {
     background-color: white !important;
     display: flex;
     justify-content: center;
+    .logo::before {
+      content: "Rajahmundry";
+    }
   }
   nav.isNavShown {
     .logo {
-      font-size: 35px !important;
+      font-size: 30px !important;
       transition: 0.3s ease-in-out;
     }
   }

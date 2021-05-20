@@ -174,6 +174,9 @@ h4 {
   .maincards {
     min-height: 15px;
     border-radius: 10px;
+    .maincardshead {
+      font-size: 30px;
+    }
   }
 }
 

@@ -110,6 +110,7 @@
   </div>
   <Footer />
   <GoTop />
+  <bottom-nav />
 </template>
 
 <script>
@@ -118,12 +119,14 @@ import Footer from "../components/Footer";
 import GoTop from "../components/GoTop";
 import OpenImg from "../components/OpenImg.vue";
 import { onMounted } from "vue";
+import BottomNav from "../components/BottomNav.vue";
 export default {
   components: {
     NavBar,
     Footer,
     GoTop,
     OpenImg,
+    BottomNav,
   },
   setup() {
     onMounted(() => {

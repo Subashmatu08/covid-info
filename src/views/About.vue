@@ -5,16 +5,19 @@
   <p class="is-size-5">Content Coming Soon!!</p>
   <div class="simply" style="height: 50vh"></div>
   <Footer />
+  <bottom-nav />
 </template>
 
 <script>
 import NavBar from "../components/NavBar.vue";
 import Footer from "../components/Footer.vue";
 import { onMounted } from "vue";
+import BottomNav from "../components/BottomNav.vue";
 export default {
   components: {
     NavBar,
     Footer,
+    BottomNav,
   },
   setup() {
     onMounted(() => {

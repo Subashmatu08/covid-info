@@ -38,6 +38,9 @@ footer {
 .footertext {
   padding: 10px 0;
 }
+@media screen and (max-width: 1024px) {
+  footer {
+    display: none;
+  }
+}
 </style>
-
-<style></style>

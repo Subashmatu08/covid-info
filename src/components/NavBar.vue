@@ -132,18 +132,36 @@ nav a.isNavShown {
 .navbar-menu {
   box-shadow: none !important;
 }
-navbar-burger.isNavShown {
-  color: black !important;
-}
 .navbar-burger {
   height: auto;
 }
-@media screen and (max-width: 1023px) {
+
+@media screen and (max-width: 1024px) {
   .navbar-menu {
-    background-color: transparent !important;
+    display: none;
   }
   nav a:hover {
-    border-bottom: none !important;
+    display: none;
+  }
+  .navbar-burger {
+    display: none !important;
+  }
+  .logo {
+    text-align: center !important;
+  }
+  nav {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    box-shadow: 0px 1.5px 7px rgb(197, 196, 196);
+    background-color: white !important;
+    display: flex;
+    justify-content: center;
+  }
+  nav.isNavShown {
+    .logo {
+      font-size: 35px !important;
+      transition: 0.3s ease-in-out;
+    }
   }
 }
 </style>

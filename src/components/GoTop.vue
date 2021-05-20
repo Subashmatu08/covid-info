@@ -52,8 +52,8 @@ export default {
     background-color: rgba(128, 128, 128, 0.288) !important;
     backdrop-filter: blur(1px);
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 2rem;
+    right: 2rem;
     color: black;
     text-align: center;
     border-radius: 50%;
@@ -62,5 +62,12 @@ export default {
 }
 .GoupShown {
   display: block;
+}
+@media screen and (max-width: 1024px) {
+  .fa-arrow-circle-up:before {
+    position: fixed;
+    bottom: 5rem !important;
+    right: 1rem !important;
+  }
 }
 </style>

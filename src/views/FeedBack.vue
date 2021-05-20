@@ -1,20 +1,25 @@
 <template>
   <nav-bar />
-  <div class="simply" style="height: 200vh"></div>
-  <BottomNav />
+  <div class="simply" style="height: 30vh"></div>
+  <h1 class="is-size-2 pt-2">This is The FeedBack Page</h1>
+  <p class="is-size-5">Page under Construction</p>
+  <div class="simply" style="height: 50vh"></div>
+  <Footer />
+  <bottom-nav />
 </template>
 
 <script>
-import BottomNav from "../components/BottomNav";
 import NavBar from "../components/NavBar.vue";
+import Footer from "../components/Footer.vue";
 import { onMounted } from "vue";
+import BottomNav from "../components/BottomNav.vue";
 export default {
   components: {
-    BottomNav,
     NavBar,
+    Footer,
+    BottomNav,
   },
-
-  NavBarsetup() {
+  setup() {
     onMounted(() => {
       window.scroll({
         top: 0,
@@ -26,4 +31,4 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="sass"></style>

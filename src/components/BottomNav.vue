@@ -1,13 +1,13 @@
 <template>
   <div class="btnav">
     <router-link to="/" class="homebtn">
-      <i class="fas fa-home-lg-alt"></i>
+      <i class="fas fa-home-lg-alt router-link-exact-active"></i>
     </router-link>
     <router-link to="/about" class="aboutbtn">
-      <i class="fas fa-users"></i>
+      <i class="fas fa-users router-link-exact-active"></i>
     </router-link>
     <router-link to="/feedback" class="contactbtn">
-      <i class="fas fa-comments-alt"></i>
+      <i class="fas fa-comments-alt router-link-exact-active"></i>
     </router-link>
   </div>
 </template>
@@ -34,11 +34,15 @@ export default {};
     align-items: center;
     position: fixed;
     bottom: 0;
+    .router-link-active {
+      color: rgb(53, 177, 140) !important;
+    }
   }
   .btnav > * {
     width: 100%;
     text-align: center;
     border-right: 0.5px solid rgb(182, 181, 181);
+    color: black;
   }
 }
 </style>

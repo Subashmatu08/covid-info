@@ -30,13 +30,21 @@
       :class="{ 'is-active': isMenuShown }"
     >
       <div class="navbar-end">
-        <router-link to="/" class="navbar-item" :class="{ isNavShown }"
+        <router-link to="/" class="navbar-item" :class="{ isNavShown }" exact
           >Home</router-link
         >
-        <router-link to="/about" class="navbar-item" :class="{ isNavShown }"
+        <router-link
+          to="/about"
+          class="navbar-item"
+          :class="{ isNavShown }"
+          active-class="router-link-active"
           >About</router-link
         >
-        <router-link to="/feedback" class="navbar-item" :class="{ isNavShown }"
+        <router-link
+          to="/feedback"
+          class="navbar-item"
+          :class="{ isNavShown }"
+          active-class="router-link-active"
           >FeedBack</router-link
         >
       </div>
@@ -110,9 +118,7 @@ nav a:hover {
   background-color: transparent !important;
   border-bottom: 2px solid rgb(72, 241, 191) !important;
 }
-nav a:focus {
-  background-color: transparent !important;
-}
+
 nav.isNavShown {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
@@ -130,6 +136,9 @@ nav a.isNavShown {
 }
 .navbar-burger {
   height: auto;
+}
+nav a.router-link-active {
+  border-bottom: 2px solid rgb(72, 241, 191) !important ;
 }
 
 @media screen and (max-width: 1024px) {
@@ -160,7 +169,7 @@ nav a.isNavShown {
   nav.isNavShown {
     .logo {
       font-size: 30px !important;
-      transition: 0.3s ease-in-out;
+      // transition: cubic-bezier(0, 2.38, 0.48, 1.68);
     }
   }
 }

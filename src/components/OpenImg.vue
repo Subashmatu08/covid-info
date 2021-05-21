@@ -12,4 +12,10 @@ export default {};
   background: url("../assets/bg2.jpg") center no-repeat;
   background-size: cover;
 }
+@media screen and (max-width: 769px) {
+  .openingimg {
+    min-height: 45vh;
+    background-size: cover;
+  }
+}
 </style>

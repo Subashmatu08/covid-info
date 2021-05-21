@@ -167,7 +167,7 @@ h4 {
   padding: auto 0 !important;
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 769px) {
   .container {
     margin: auto 30px;
   }

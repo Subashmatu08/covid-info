@@ -1,6 +1,21 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
+import CovidTest from "../views/CovidTest.vue";
+import ErrorPage from "../views/ErrorPage.vue";
 
+// const name = [
+//   "home",
+//   "about",
+//   "feedback",
+//   "oxygen",
+//   "doctors",
+//   "hospitals",
+//   "covid-test",
+//   "blood-test",
+//   "hospital-beds",
+//   "food-supplies",
+//   "remedesivir",
+// ];
 const routes = [
   {
     path: "/",
@@ -37,8 +52,7 @@ const routes = [
   {
     path: "/covid-test",
     name: "CovidTest",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/CovidTest.vue"),
+    component: CovidTest,
   },
   {
     path: "/doctors",
@@ -75,6 +89,10 @@ const routes = [
     name: "FoodSupplies",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/FoodSupplies.vue"),
+  },
+  {
+    path: "/:catchAll(.*)",
+    component: ErrorPage,
   },
 ];
 

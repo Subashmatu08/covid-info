@@ -3,7 +3,7 @@
   <OpenImg />
   <div class="container">
     <div class="title has-text-center">
-      <p class="is-size-4 pt-3 has-text-black">
+      <p class="is-size-3 pt-5 pb-2 has-text-black">
         One Place for all Covid Related Information in Rajahamundry
       </p>
     </div>
@@ -149,19 +149,22 @@ export default {
   box-shadow: 2px 2px 12px rgb(197, 196, 196);
 }
 .maincardsdesc {
-  padding: 20px 0;
+  padding: 0.5em;
 }
 .maincards:hover {
-  background: rgb(126, 199, 248);
-  color: white !important;
+  // background: rgb(126, 199, 248);
+  // background: rgb(72, 241, 191) !important ;
+  background: rgb(53, 177, 140) !important;
+
+  color: white;
+  transition: 0.3s ease-in-out;
   .maincardshead {
     color: white;
-    font-size: 30px;
   }
 }
-
-h4 {
-  font-size: 30px;
+.maincardshead {
+  padding: 0.5em;
+  margin: 0 !important;
 }
 .column {
   padding: auto 0 !important;
@@ -174,9 +177,6 @@ h4 {
   .maincards {
     min-height: 15px;
     border-radius: 10px;
-    .maincardshead {
-      font-size: 30px;
-    }
   }
 }
 

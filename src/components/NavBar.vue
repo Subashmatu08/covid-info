@@ -113,15 +113,17 @@ nav a {
   font-weight: 500;
   margin-top: 5px;
   border: none;
+  margin: auto 2px;
 }
 nav a:hover {
   background-color: transparent !important;
-  border-bottom: 2px solid rgb(72, 241, 191) !important;
+  // border-bottom: 2px solid rgb(72, 241, 191) !important;
+  border-bottom: 2px solid rgb(53, 177, 140) !important;
 }
 
 nav.isNavShown {
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
   background-color: white !important;
   transition: 0.3s ease-in-out;
   box-shadow: 0px 1.5px 7px rgb(197, 196, 196);
@@ -138,7 +140,8 @@ nav a.isNavShown {
   height: auto;
 }
 nav a.router-link-active {
-  border-bottom: 2px solid rgb(72, 241, 191) !important ;
+  // border-bottom: 2px solid rgb(72, 241, 191) !important ;
+  border-bottom: 2px solid rgb(53, 177, 140) !important;
 }
 
 @media screen and (max-width: 1024px) {
@@ -167,9 +170,10 @@ nav a.router-link-active {
     }
   }
   nav.isNavShown {
+    height: 78px;
     .logo {
-      font-size: 30px !important;
-      // transition: cubic-bezier(0, 2.38, 0.48, 1.68);
+      font-size: 30px;
+      transition: 0.2s ease-out;
     }
   }
 }

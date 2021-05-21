@@ -1,16 +1,14 @@
 <template>
   <footer class="footer">
-    <div class="content has-text-center pl-5">
+    <div class="footercontent">
       <p class="footertext">
         RJY Covid Info by
         <a href="https://subashmatu.netlify.app" target="_blank" class="to"
           >Subash Matu</a
-        >.
+        >
       </p>
+      <p class="footerdesc">Stay Home Stay Safe</p>
     </div>
-    <!-- <div class="content has-text-right pr-5">
-      <p>Stay Home Stay Safe</p>
-    </div> -->
   </footer>
 </template>
 
@@ -31,13 +29,21 @@ footer {
   top: 100;
   width: 100%;
 }
+.footercontent {
+  display: flex !important;
+  flex-direction: row;
+}
+.footercontent > * {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  vertical-align: middle;
+}
 .to {
   color: black;
   font-weight: 700;
 }
-.footertext {
-  padding: 10px 0;
-}
+
 @media screen and (max-width: 1024px) {
   footer {
     display: none;

@@ -28,7 +28,7 @@ export default {};
     display: flex !important;
     flex-direction: row;
     justify-content: space-around;
-    font-size: 30px;
+    font-size: 25px;
     box-shadow: 0px 1.5px 7px rgb(197, 196, 196);
     height: 4rem;
     align-items: center;

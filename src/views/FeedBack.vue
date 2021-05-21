@@ -1,9 +1,11 @@
 <template>
   <nav-bar />
-  <div class="simply" style="height: 30vh"></div>
-  <h1 class="is-size-2 pt-2">This is The FeedBack Page</h1>
-  <p class="is-size-5">Page under Construction</p>
-  <div class="simply" style="height: 50vh"></div>
+  <div class="container">
+    <div class="simply" style="height: 30vh"></div>
+    <h1 class="is-size-2 pt-2">This is The FeedBack Page</h1>
+    <p class="is-size-5">Page under Construction</p>
+    <div class="simply" style="height: 50vh"></div>
+  </div>
   <Footer />
   <bottom-nav />
 </template>
@@ -31,4 +33,4 @@ export default {
 };
 </script>
 
-<style lang="sass"></style>
+<style lang="scss"></style>

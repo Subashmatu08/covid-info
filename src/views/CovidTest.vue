@@ -145,7 +145,7 @@ export default {
     async function getData() {
       try {
         const response = await fetch(
-          "https://raw.githubusercontent.com/Subashmatu08/covid-info/main/public/data/data.json"
+          "https://raw.githubusercontent.com/Subashmatu08/covid-info/main/public/data.json"
         );
         const data = await response.json();
         console.log(data);

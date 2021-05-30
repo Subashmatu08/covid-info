@@ -1,37 +1,37 @@
 [
   {
     "covid-title": "Jagruthi",
-    "covid-verify": "true",
+    "covid-verify": true,
     "covid-address": "Gandhipuram-2,Rajahmundry",
     "covid-phone": "348575345",
-    "covid-rtpcr": "true",
-    "covid-rapid": "false"
+    "covid-rtpcr": true,
+    "covid-rapid": false
   },
 
   {
     "covid-title": "Thyrocare",
-    "covid-verify": "false",
+    "covid-verify": false,
     "covid-address": "Near TTD Kalyana Mandapam,Rajahmundry",
     "covid-phone": "0883-034743",
-    "covid-rtpcr": "true",
-    "covid-rapid": "false"
+    "covid-rtpcr": false,
+    "covid-rapid": true
   },
 
   {
     "covid-title": "PHC",
-    "covid-verify": "true",
+    "covid-verify": true,
     "covid-address": "Morumpudi,Rajahmundry",
     "covid-phone": "348575345",
-    "covid-rtpcr": "true",
-    "covid-rapid": "false"
+    "covid-rtpcr": true,
+    "covid-rapid": false
   },
 
   {
     "covid-title": "PHC",
-    "covid-verify": "false",
+    "covid-verify": false,
     "covid-address": "Narayanapuram,Rajahmundry",
     "covid-phone": "348575345",
-    "covid-rtpcr": "true",
-    "covid-rapid": "false"
+    "covid-rtpcr": true,
+    "covid-rapid": false
   }
 ]

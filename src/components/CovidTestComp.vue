@@ -4,7 +4,9 @@
       <div class="column">
         <div class="covidtop">
           <h4 class="is-size-3 has-text-weight-semibold">{{ covidTitle }}</h4>
-          <p class="is-size-6 has-text-success pr-4">{{ covidVerify }}</p>
+          <p class="is-size-6 has-text-success pr-4" v-if="covidVerify">
+            verified
+          </p>
         </div>
       </div>
     </div>
@@ -14,10 +16,28 @@
         Ph.No : <a :href="`tel:+91${covidPhone}`">{{ covidPhone }}</a>
       </h4>
       <p class="is-size-6 column p-4 has-text-right">
-        RTPCR
-        <i class="far fa-check-circle has-text-success pr-2"></i>
-        Rapid-Antigen
-        <i class="far fa-times-circle has-text-danger"></i>
+        <span>
+          RTPCR
+          <i
+            class="far fa-check-circle has-text-success pr-2"
+            v-show="covidRtpcr"
+          ></i>
+          <i
+            class="far fa-times-circle has-text-danger"
+            v-show="!covidRtpcr"
+          ></i>
+        </span>
+        <span>
+          Rapid Antigen
+          <i
+            class="far fa-check-circle has-text-success pr-2"
+            v-show="covidRapid"
+          ></i>
+          <i
+            class="far fa-times-circle has-text-danger"
+            v-show="!covidRapid"
+          ></i>
+        </span>
       </p>
     </div>
   </div>
@@ -25,7 +45,14 @@
 
 <script>
 export default {
-  props: ["covidTitle", "covidVerify", "covidAddress", "covidPhone"],
+  props: [
+    "covidTitle",
+    "covidVerify",
+    "covidAddress",
+    "covidPhone",
+    "covidRtpcr",
+    "covidRapid",
+  ],
 };
 </script>
 

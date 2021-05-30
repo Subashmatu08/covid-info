@@ -1,6 +1,12 @@
 <template>
   <NavBar />
   <div style="height: 15vh"></div>
+  <div
+    class="errorMessage has-text-centered has-text-white has-background-danger"
+    v-show="errorMessage"
+  >
+    {{ errorMessage }}
+  </div>
   <div class="container">
     <div class="title has-text-center">
       <p class="is-size-4 pt-3 has-text-black">Places Taking Covid Test</p>
@@ -12,7 +18,9 @@
         :covidTitle="hospital['covid-title']"
         :covidVerify="hospital['covid-verify']"
         :covidPhone="hospital['covid-phone']"
-        :covidAdress="hospital['covid-address']"
+        :covidAddress="hospital['covid-address']"
+        :covidRtpcr="hospital['covid-rtpcr']"
+        :covidRapid="hospital['covid-rapid']"
         :key="index"
       />
     </div>
@@ -128,7 +136,7 @@
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import GoTop from "../components/GoTop";
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import BottomNav from "../components/BottomNav.vue";
 import CovidTestComp from "../components/CovidTestComp";
 export default {
@@ -140,37 +148,24 @@ export default {
     CovidTestComp,
   },
   setup() {
-    const covidHospitals = [
-      {
-        "covid-title": "Jagruthi",
-        "covid-verify": "Verified",
-        "covid-address": "Gandhipuram-2,Rajahmundry",
-        "covid-phone": "348575345",
-      },
-
-      {
-        "covid-title": "Thyrocare",
-        "covid-verify": "Verified",
-        "covid-address": "Near TTD Kalyana Mandapam,Rajahmundry",
-        "covid-phone": "0883-034743",
-      },
-
-      {
-        "covid-title": "PHC",
-        "covid-verify": "Verified",
-        "covid-address": "Morumpudi,Rajahmundry",
-        "covid-phone": "348575345",
-      },
-
-      {
-        "covid-title": "PHC",
-        " covid-verify": "Verified",
-        "covid-address": "Narayanapuram,Rajahmundry",
-        "covid-phone": "348575345",
-      },
-    ];
+    const errorMessage = ref("");
+    const covidHospitals = ref([]);
+    async function getData() {
+      try {
+        const response = await fetch(
+          "https://raw.githubusercontent.com/Subashmatu08/covid-info/main/public/data.json"
+        );
+        const data = await response.json();
+        console.log(data);
+        covidHospitals.value = data;
+      } catch (error) {
+        console.log(error);
+        errorMessage.value = error.message || "failed to fetch";
+      }
+    }
 
     onMounted(() => {
+      getData();
       window.scroll({
         top: 0,
         left: 0,
@@ -179,6 +174,7 @@ export default {
 
     return {
       covidHospitals,
+      errorMessage,
     };
   },
 };

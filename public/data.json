@@ -32,6 +32,14 @@
     "covid-address": "Narayanapuram,Rajahmundry",
     "covid-phone": "348575345",
     "covid-rtpcr": true,
-    "covid-rapid": false
+    "covid-rapid": true
+  },
+    {
+    "covid-title": "Hello",
+    "covid-verify": false,
+    "covid-address": "Narayanapuram,Rajahmundry",
+    "covid-phone": "348575345",
+    "covid-rtpcr": true,
+    "covid-rapid": true
   }
 ]

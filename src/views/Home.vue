@@ -3,8 +3,9 @@
   <OpenImg />
   <div class="container">
     <div class="title has-text-center">
-      <p class="is-size-3 pt-5 pb-2 has-text-black">
-        One Place for all Covid Related Information in Rajahamundry
+      <p class="pt-5 pb-2 has-text-black">
+        The One Place for all Covid Related Information in
+        <span style="color: rgb(53, 177, 140)">Rajahamundry</span>
       </p>
     </div>
     <div class="content is-size-5">
@@ -133,7 +134,6 @@ export default {
       window.scroll({
         top: 0,
         left: 0,
-        behavior: "smooth",
       });
     });
   },
@@ -155,7 +155,6 @@ export default {
   // background: rgb(126, 199, 248);
   // background: rgb(72, 241, 191) !important ;
   background: rgb(53, 177, 140) !important;
-
   color: white;
   transition: 0.3s ease-in-out;
   .maincardshead {
@@ -170,13 +169,25 @@ export default {
   padding: auto 0 !important;
 }
 
+@media screen and (max-width: 1024px) {
+  .maincards {
+    min-height: 30vh;
+  }
+}
+
 @media screen and (max-width: 769px) {
   .container {
     margin: auto 30px;
   }
   .maincards {
-    min-height: 15px;
+    min-height: 15vh;
     border-radius: 10px;
+  }
+
+  .title {
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.3em;
   }
 }
 

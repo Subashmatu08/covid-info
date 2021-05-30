@@ -1,6 +1,6 @@
 <template>
   <NavBar />
-  <div style="height: 100vh"></div>
+  <page-under-const />
   <Footer />
   <GoTop />
   <bottom-nav />
@@ -12,12 +12,14 @@ import Footer from "../components/Footer";
 import GoTop from "../components/GoTop";
 import { onMounted } from "vue";
 import BottomNav from "../components/BottomNav.vue";
+import PageUnderConst from "../components/PageUnderConst";
 export default {
   components: {
     NavBar,
     Footer,
     GoTop,
     BottomNav,
+    PageUnderConst,
   },
   setup() {
     onMounted(() => {

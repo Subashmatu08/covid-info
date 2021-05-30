@@ -5,8 +5,8 @@
       <i class="fal fa-arrow-circle-up icon"></i>
     </span>
   </a> -->
-  <a class="goup" @click="ToTop" :class="{ GoupShown }">
-    <i class="fal fa-arrow-circle-up icon"></i>
+  <a class="goup" @click="ToTop">
+    <i class="fal fa-arrow-circle-up icon" :class="{ GoupShown }"></i>
   </a>
 </template>
 
@@ -45,9 +45,12 @@ export default {
 
 <style lang="scss">
 .goup {
-  display: none;
-  .fa-arrow-circle-up:before {
+  .icon {
+    text-align: center;
     font-size: 30px;
+  }
+  .icon::before {
+    padding: 0.5rem;
     // background: rgb(72, 241, 191);
     background-color: rgba(128, 128, 128, 0.288) !important;
     backdrop-filter: blur(1px);
@@ -55,16 +58,17 @@ export default {
     bottom: 2rem;
     right: 2rem;
     color: black;
-    text-align: center;
     border-radius: 50%;
-    padding: 0.5rem;
+    transform: scale(0);
   }
 }
-.GoupShown {
-  display: block;
+.icon.GoupShown::before {
+  transform: scale(1);
+  transition: transform 170ms ease;
 }
+
 @media screen and (max-width: 1024px) {
-  .fa-arrow-circle-up:before {
+  .fa-arrow-circle-up::before {
     position: fixed;
     bottom: 5rem !important;
     right: 1rem !important;

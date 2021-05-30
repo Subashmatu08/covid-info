@@ -108,18 +108,35 @@ nav {
 }
 nav a {
   color: black !important;
-  border-bottom: 1px solid transparent;
   text-align: center;
   font-weight: 500;
   margin-top: 5px;
   border: none;
   margin: auto 2px;
+  &:hover {
+    background: transparent !important;
+  }
 }
-nav a:hover {
-  background-color: transparent !important;
-  // border-bottom: 2px solid rgb(72, 241, 191) !important;
-  border-bottom: 2px solid rgb(53, 177, 140) !important;
+nav a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10%;
+  left: 0%;
+  width: 0;
+  height: 2px;
+  background: rgb(72, 241, 191);
+  // background: red !important;
 }
+nav a:hover::after {
+  width: 100%;
+  transition: width 0.2s ease-in-out;
+}
+// nav a:hover {
+//   background-color: transparent !important;
+//   border-bottom: 2px solid rgb(72, 241, 191) !important;
+//   // border-bottom: 2px solid rgb(53, 177, 140) !important;
+// }
 
 nav.isNavShown {
   padding-top: 3px !important;
@@ -141,19 +158,24 @@ nav a.isNavShown {
 }
 nav a.router-link-active {
   // border-bottom: 2px solid rgb(72, 241, 191) !important ;
-  border-bottom: 2px solid rgb(53, 177, 140) !important;
+  // border-bottom: 2px solid rgb(53, 177, 140) !important;
+  &::after {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-  .navbar-menu {
-    display: none;
-  }
+  .navbar-menu,
+  .navbar-burger,
   nav a:hover {
-    display: none;
-  }
-  .navbar-burger {
     display: none !important;
   }
+  // nav a:hover {
+  //   display: none;
+  // }
+  // .navbar-burger {
+  //   display: none !important;
+  // }
   .logo {
     text-align: center !important;
     font-size: 25px;
@@ -173,7 +195,7 @@ nav a.router-link-active {
     height: 78px;
     .logo {
       font-size: 30px;
-      transition: 0.2s ease-out;
+      transition: font-size 0.2s ease-in-out;
     }
   }
 }

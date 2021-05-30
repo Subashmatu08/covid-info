@@ -7,7 +7,9 @@
     style="position: fixed"
   >
     <div class="navbar-brand">
-      <p class="navbar-item logo" :class="{ isNavShown }">&nbsp;Covid Info</p>
+      <router-link to="/" class="navbar-item logo" :class="{ isNavShown }"
+        >&nbsp;Covid Info</router-link
+      >
 
       <a
         role="button"
@@ -96,12 +98,18 @@ nav {
 .logo {
   font-family: "Pattaya", sans-serif;
   font-size: 30px;
-  color: rgb(19, 19, 19);
+  color: rgb(19, 19, 19) !important;
   margin-top: 5px;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  &:focus {
+    background: transparent;
+  }
+  &:hover {
+    color: black !important;
+  }
 }
 .logo::before {
   content: "Rjy";
@@ -116,8 +124,11 @@ nav a {
   &:hover {
     background: transparent !important;
   }
+  &:focus {
+    background: transparent !important;
+  }
 }
-nav a::after {
+.navbar-menu a::after {
   content: "";
   display: block;
   position: absolute;
@@ -128,7 +139,7 @@ nav a::after {
   background: rgb(72, 241, 191);
   // background: red !important;
 }
-nav a:hover::after {
+.navbar-menu a:hover::after {
   width: 100%;
   transition: width 0.2s ease-in-out;
 }
@@ -145,7 +156,7 @@ nav.isNavShown {
   transition: 0.3s ease-in-out;
   box-shadow: 0px 1.5px 7px rgb(197, 196, 196);
 }
-nav a.isNavShown {
+.navbar-menu a.isNavShown {
   color: black !important;
   background-color: transparent;
   border-bottom: none;

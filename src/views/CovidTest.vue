@@ -1,5 +1,4 @@
 <template>
-  <NavBar />
   <div style="height: 15vh"></div>
   <div
     class="errorMessage has-text-centered has-text-white has-background-danger"
@@ -12,7 +11,8 @@
       <p class="is-size-4 pt-3 has-text-black">Places Taking Covid Test</p>
     </div>
 
-    <div class="covidcontent">
+    <loader v-if="isLoading" />
+    <div class="covidcontent" v-else>
       <covid-test-comp
         v-for="(hospital, index) in covidHospitals"
         :covidTitle="hospital['covid-title']"
@@ -127,37 +127,31 @@
       </div>
     </div>-->
   </div>
-  <Footer />
-  <GoTop />
-  <bottom-nav />
 </template>
 
 <script>
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import GoTop from "../components/GoTop";
 import { onMounted, ref } from "vue";
-import BottomNav from "../components/BottomNav.vue";
 import CovidTestComp from "../components/CovidTestComp";
+import Loader from "../components/loader.vue";
 export default {
   components: {
-    NavBar,
-    Footer,
-    GoTop,
-    BottomNav,
     CovidTestComp,
+    Loader,
   },
   setup() {
     const errorMessage = ref("");
+    const isLoading = ref(true);
     const covidHospitals = ref([]);
     async function getData() {
       try {
         const response = await fetch(
-          "https://raw.githubusercontent.com/Subashmatu08/covid-info/main/public/data.json"
+          "https://raw.githubusercontent.com/Subashmatu08/covid-info/main/public/data/data.json"
         );
         const data = await response.json();
         console.log(data);
         covidHospitals.value = data;
+        await new Promise((resolve) => setTimeout(resolve, 500));
+        isLoading.value = false;
       } catch (error) {
         console.log(error);
         errorMessage.value = error.message || "failed to fetch";
@@ -175,6 +169,7 @@ export default {
     return {
       covidHospitals,
       errorMessage,
+      isLoading,
     };
   },
 };

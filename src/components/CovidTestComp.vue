@@ -5,7 +5,10 @@
         <div class="covidtop">
           <h4 class="is-size-3 has-text-weight-semibold">{{ covidTitle }}</h4>
           <p class="is-size-6 has-text-success pr-4" v-if="covidVerify">
-            verified
+            Verified
+          </p>
+          <p class="is-size-6 has-text-danger pr-4" v-if="!covidVerify">
+            Not Verified
           </p>
         </div>
       </div>
@@ -23,14 +26,14 @@
             v-show="covidRtpcr"
           ></i>
           <i
-            class="far fa-times-circle has-text-danger"
+            class="far fa-times-circle has-text-danger pr-2"
             v-show="!covidRtpcr"
           ></i>
         </span>
         <span>
           Rapid Antigen
           <i
-            class="far fa-check-circle has-text-success pr-2"
+            class="far fa-check-circle has-text-success"
             v-show="covidRapid"
           ></i>
           <i

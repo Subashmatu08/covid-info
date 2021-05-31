@@ -130,7 +130,7 @@ export default {
   setup() {
     const isLoading = ref(true);
     onMounted(async () => {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      await new Promise((resolve) => setTimeout(resolve, 500));
       isLoading.value = false;
       window.scroll({
         top: 0,

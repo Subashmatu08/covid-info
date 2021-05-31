@@ -18,7 +18,7 @@ export default {
 
 <style lang="scss">
 .error {
-  height: 100vh;
+  min-height: 100vh;
   background-color: rgb(48, 45, 45);
   position: relative;
   .errorcontent {

@@ -28,7 +28,7 @@ main {
   min-height: 100vh;
 }
 @media screen and (max-width: 1024px) {
-  body {
+  main {
     padding-bottom: 10vh;
   }
 }

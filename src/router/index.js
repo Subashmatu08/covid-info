@@ -3,19 +3,6 @@ import Home from "../views/Home.vue";
 import CovidTest from "../views/CovidTest.vue";
 import ErrorPage from "../views/ErrorPage.vue";
 
-// const name = [
-//   "home",
-//   "about",
-//   "feedback",
-//   "oxygen",
-//   "doctors",
-//   "hospitals",
-//   "covid-test",
-//   "blood-test",
-//   "hospital-beds",
-//   "food-supplies",
-//   "remedesivir",
-// ];
 const routes = [
   {
     path: "/",

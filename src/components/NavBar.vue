@@ -82,7 +82,8 @@ export default {
 nav {
   position: fixed !important;
   width: 100%;
-  background-color: rgba(240, 239, 239, 0.288) !important;
+  // background-color: rgba(240, 239, 239, 0.288) !important;
+  background: transparent !important;
   backdrop-filter: blur(2px);
 }
 .isNavShown {
@@ -98,12 +99,13 @@ nav {
 .logo {
   font-family: "Pattaya", sans-serif;
   font-size: 30px;
-  color: rgb(19, 19, 19) !important;
+  color: rgb(0, 0, 0) !important;
   margin-top: 5px;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  text-shadow: 1px 1px 1px grey;
   &:focus {
     background: transparent;
   }
@@ -141,7 +143,7 @@ nav a {
 }
 .navbar-menu a:hover::after {
   width: 100%;
-  transition: width 0.2s ease-in-out;
+  transition: width 0.4s ease-in-out;
 }
 // nav a:hover {
 //   background-color: transparent !important;
@@ -153,8 +155,8 @@ nav.isNavShown {
   padding-top: 3px !important;
   padding-bottom: 3px !important;
   background-color: white !important;
-  transition: 0.3s ease-in-out;
-  box-shadow: 0px 1.5px 7px rgb(197, 196, 196);
+  transition: 0.2s ease-in-out;
+  box-shadow: 0px 1.5px 7px rgb(66, 66, 66);
 }
 .navbar-menu a.isNavShown {
   color: black !important;
@@ -190,7 +192,16 @@ nav a.router-link-active {
   .logo {
     text-align: center !important;
     font-size: 25px;
+    &::before {
+      content: "Rajahmundry";
+    }
+    a {
+      &:hover {
+        color: inherit;
+      }
+    }
   }
+
   nav {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
@@ -198,9 +209,6 @@ nav a.router-link-active {
     background-color: white !important;
     display: flex;
     justify-content: center;
-    .logo::before {
-      content: "Rajahmundry";
-    }
   }
   nav.isNavShown {
     height: 78px;

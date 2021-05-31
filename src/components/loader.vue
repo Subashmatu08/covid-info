@@ -23,6 +23,7 @@ export default {};
   justify-content: center;
   align-items: center;
   background: white;
+  color: black;
   span {
     font-family: "Pattaya", sans-serif;
   }

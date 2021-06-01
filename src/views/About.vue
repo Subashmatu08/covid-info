@@ -7,16 +7,4 @@
   </div>
 </template>
 
-<script>
-import { onMounted } from "vue";
-export default {
-  components: {},
-  setup() {
-    onMounted(() => {
-      window.scrollTo(0, 0);
-    });
-  },
-};
-</script>
-
 <style lang="sass"></style>

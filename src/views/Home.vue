@@ -132,10 +132,6 @@ export default {
     onMounted(async () => {
       await new Promise((resolve) => setTimeout(resolve, 500));
       isLoading.value = false;
-      window.scroll({
-        top: 0,
-        left: 0,
-      });
     });
     return {
       isLoading,
@@ -159,10 +155,10 @@ export default {
   // background: rgb(126, 199, 248);
   // background: rgb(72, 241, 191) !important ;
   background: rgb(53, 177, 140) !important;
-  color: white;
+  //color: white !important;
   transition: 0.3s ease-in-out;
-  .maincardshead {
-    color: white;
+  .maincards > * {
+    color: white !important;
   }
 }
 .maincardshead {

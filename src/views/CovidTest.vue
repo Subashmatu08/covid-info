@@ -150,7 +150,7 @@ export default {
         const data = await response.json();
         console.log(data);
         covidHospitals.value = data;
-        await new Promise((resolve) => setTimeout(resolve, 500));
+        // await new Promise((resolve) => setTimeout(resolve, 500));
         isLoading.value = false;
       } catch (error) {
         console.log(error);
@@ -160,10 +160,6 @@ export default {
 
     onMounted(() => {
       getData();
-      window.scroll({
-        top: 0,
-        left: 0,
-      });
     });
 
     return {

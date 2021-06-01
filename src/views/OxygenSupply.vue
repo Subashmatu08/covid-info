@@ -46,19 +46,10 @@
 </template>
 
 <script>
-import { onMounted } from "vue";
 import OxygenSupplyComp from "../components/OxygenSupplyComp";
 export default {
   components: {
     OxygenSupplyComp,
-  },
-  setup() {
-    onMounted(() => {
-      window.scroll({
-        top: 0,
-        left: 0,
-      });
-    });
   },
 };
 </script>

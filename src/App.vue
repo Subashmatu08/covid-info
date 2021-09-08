@@ -8,10 +8,10 @@
   <go-top />
 </template>
 <script>
-import Footer from "./components/Footer";
-import NavBar from "./components/NavBar.vue";
-import GoTop from "./components/GoTop.vue";
-import BottomNav from "./components/BottomNav.vue";
+import Footer from './components/Footer';
+import NavBar from './components/NavBar.vue';
+import GoTop from './components/GoTop.vue';
+import BottomNav from './components/BottomNav.vue';
 
 export default {
   components: {
@@ -24,6 +24,11 @@ export default {
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: 'Azonix';
+  src: local('Azonix'), url(./fonts/Azonix.otf) format('truetype');
+}
+
 main {
   min-height: 100vh;
 }

@@ -55,7 +55,7 @@
 </template>
 
 <script>
-import { onMounted, ref } from "vue";
+import { onMounted, ref } from 'vue';
 export default {
   setup() {
     const isMenuShown = ref(false);
@@ -68,7 +68,7 @@ export default {
       }
     }
     onMounted(() => {
-      window.addEventListener("scroll", handleScroll);
+      window.addEventListener('scroll', handleScroll);
     });
     return {
       isMenuShown,
@@ -97,15 +97,16 @@ nav {
   }
 }
 .logo {
-  font-family: "Pattaya", sans-serif;
-  font-size: 30px;
+  // font-family: 'Pattaya', sans-serif;
+  font-family: 'Azonix', sans-serif;
+  font-size: 25px;
   color: rgb(0, 0, 0) !important;
   margin-top: 5px;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  text-shadow: 1px 1px 1px grey;
+  // text-shadow: 1px 1px 1px grey;
   &:focus {
     background: transparent;
   }
@@ -114,7 +115,7 @@ nav {
   }
 }
 .logo::before {
-  content: "Rjy";
+  content: 'Rjy';
 }
 nav a {
   color: black !important;
@@ -131,7 +132,7 @@ nav a {
   }
 }
 .navbar-menu a::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   bottom: -10%;
@@ -191,10 +192,10 @@ nav a.router-link-active {
   // }
   .logo {
     text-align: center !important;
-    font-size: 25px;
-    &::before {
-      content: "Rajahmundry";
-    }
+    font-size: 20px;
+    // &::before {
+    //   content: 'Rajahmundry';
+    // }
     a {
       &:hover {
         color: inherit;

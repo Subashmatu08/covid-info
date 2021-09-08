@@ -130,22 +130,22 @@
 </template>
 
 <script>
-import { onMounted, ref } from "vue";
-import CovidTestComp from "../components/CovidTestComp";
-import Loader from "../components/loader.vue";
+import { onMounted, ref } from 'vue';
+import CovidTestComp from '../components/CovidTestComp';
+import Loader from '../components/loader.vue';
 export default {
   components: {
     CovidTestComp,
     Loader,
   },
   setup() {
-    const errorMessage = ref("");
+    const errorMessage = ref('');
     const isLoading = ref(true);
     const covidHospitals = ref([]);
     async function getData() {
       try {
         const response = await fetch(
-          "https://raw.githubusercontent.com/Subashmatu08/covid-info/main/public/data.json"
+          'https://raw.githubusercontent.com/Subashmatu08/covid-info/main/public/data.json'
         );
         const data = await response.json();
         console.log(data);
@@ -154,7 +154,7 @@ export default {
         isLoading.value = false;
       } catch (error) {
         console.log(error);
-        errorMessage.value = error.message || "failed to fetch";
+        errorMessage.value = error.message || 'failed to fetch';
       }
     }
 

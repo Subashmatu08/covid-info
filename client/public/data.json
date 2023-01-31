@@ -1,0 +1,88 @@
+[
+  {
+    "covid-title": "Jagruthi",
+    "covid-verify": true,
+    "covid-address": "Gandhipuram-2,Rajahmundry",
+    "covid-phone": "348575345",
+    "covid-rtpcr": true,
+    "covid-rapid": false
+  },
+
+  {
+    "covid-title": "Thyrocare",
+    "covid-verify": false,
+    "covid-address": "Near TTD Kalyana Mandapam,Rajahmundry",
+    "covid-phone": "0883-034743",
+    "covid-rtpcr": false,
+    "covid-rapid": true
+  },
+
+  {
+    "covid-title": "PHC",
+    "covid-verify": true,
+    "covid-address": "Morumpudi,Rajahmundry",
+    "covid-phone": "348575345",
+    "covid-rtpcr": true,
+    "covid-rapid": false
+  },
+
+  {
+    "covid-title": "PHC",
+    "covid-verify": false,
+    "covid-address": "Narayanapuram,Rajahmundry",
+    "covid-phone": "348575345",
+    "covid-rtpcr": true,
+    "covid-rapid": true
+  },
+  {
+    "covid-title": "Hello",
+    "covid-verify": false,
+    "covid-address": "Narayanapuram,Rajahmundry",
+    "covid-phone": "348575345",
+    "covid-rtpcr": true,
+    "covid-rapid": true
+  },
+  {
+    "doctor-title": "doc1",
+    "doctor-verify": true,
+    "doctor-address": "Gandhipuram-2,Rajahmundry",
+    "doctor-phone": "348575345",
+    "doctor-rtpcr": true,
+    "doctor-rapid": false
+  },
+
+  {
+    "doctor-title": "doc2",
+    "doctor-verify": false,
+    "doctor-address": "Near TTD Kalyana Mandapam,Rajahmundry",
+    "doctor-phone": "0883-034743",
+    "doctor-rtpcr": false,
+    "doctor-rapid": true
+  },
+
+  {
+    "doctor-title": "doc3",
+    "doctor-verify": true,
+    "doctor-address": "Morumpudi,Rajahmundry",
+    "doctor-phone": "348575345",
+    "doctor-rtpcr": true,
+    "doctor-rapid": false
+  },
+
+  {
+    "doctor-title": "doc4",
+    "doctor-verify": false,
+    "doctor-address": "Narayanapuram,Rajahmundry",
+    "doctor-phone": "348575345",
+    "doctor-rtpcr": true,
+    "doctor-rapid": true
+  },
+  {
+    "doctor-title": "doc5",
+    "doctor-verify": false,
+    "doctor-address": "Narayanapuram,Rajahmundry",
+    "doctor-phone": "348575345",
+    "doctor-rtpcr": true,
+    "doctor-rapid": true
+  }
+]

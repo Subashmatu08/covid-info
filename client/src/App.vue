@@ -11,7 +11,7 @@ const isLoading = ref(true);
 const errorMessage = ref('');
 async function getData() {
   try {
-    const response = await fetch('http://localhost:1337');
+    const response = await fetch(import.meta.env.VITE_SERVER_URL);
     const data = await response.json();
     console.log(data);
     covidData.value = data;
